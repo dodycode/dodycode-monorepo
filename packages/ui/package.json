@@ -8,12 +8,33 @@
       "types": "./dist/src/index.d.ts",
       "default": "./src/index.ts"
     },
-    "./*": {
-      "types": "./dist/src/*.d.ts",
-      "default": [
-        "./src/*.ts",
-        "./src/*.tsx"
-      ]
+    "./button": {
+      "types": "./dist/src/button.d.ts",
+      "default": "./src/button.tsx"
+    },
+    "./dropdown-menu": {
+      "types": "./dist/src/dropdown-menu.d.ts",
+      "default": "./src/dropdown-menu.tsx"
+    },
+    "./form": {
+      "types": "./dist/src/form.d.ts",
+      "default": "./src/form.tsx"
+    },
+    "./input": {
+      "types": "./dist/src/input.d.ts",
+      "default": "./src/input.tsx"
+    },
+    "./label": {
+      "types": "./dist/src/label.d.ts",
+      "default": "./src/label.tsx"
+    },
+    "./theme": {
+      "types": "./dist/src/theme.d.ts",
+      "default": "./src/theme.tsx"
+    },
+    "./toast": {
+      "types": "./dist/src/toast.d.ts",
+      "default": "./src/toast.tsx"
     }
   },
   "license": "MIT",
