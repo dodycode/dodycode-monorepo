@@ -2,21 +2,26 @@ packages:
   - apps/*
   - packages/*
   - tooling/*
+  - internal/*
 
 catalog:
   "@tanstack/react-query": ^5.64.2
-  "@trpc/client": ^11.0.0-rc.477
-  "@trpc/react-query": ^11.0.0-rc.477
-  "@trpc/server": ^11.0.0-rc.477
-  eslint: ^9.19.0
-  prettier: ^3.4.2
-  tailwindcss: ^3.4.14
+  "@trpc/client": ^11.0.0-rc.688
+  "@trpc/react-query": ^11.0.0-rc.688
+  "@trpc/server": ^11.0.0-rc.688
+  "@t3-oss/env-nextjs": ^0.12.0
+  "@t3-oss/env-core": ^0.12.0
+  tailwindcss: ^3.4.17
   typescript: ^5.7.3
   zod: ^3.24.1
+  eslint: ^9.11.0
+  prettier: ^3.4.2
 
 catalogs:
-  react18:
-    react: 18.3.1
-    react-dom: 18.3.1
-    "@types/react": ^18.3.11
-    "@types/react-dom": ^18.3.1
+  react19:
+    react: "^19.0.0"
+    react-dom: "^19.0.0"
+    "@types/react": "^19"
+    "@types/react-dom": "^19"
+  next15:
+    next: "^15.1.6"

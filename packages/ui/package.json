@@ -1,5 +1,5 @@
 {
-  "name": "@acme/ui",
+  "name": "@dodycode/ui",
   "private": true,
   "version": "0.1.0",
   "type": "module",
@@ -37,20 +37,20 @@
     "tailwind-merge": "^2.6.0"
   },
   "devDependencies": {
-    "@acme/eslint-config": "workspace:*",
-    "@acme/prettier-config": "workspace:*",
-    "@acme/tailwind-config": "workspace:*",
-    "@acme/tsconfig": "workspace:*",
-    "@types/react": "catalog:react18",
+    "@dodycode/eslint-config": "workspace:*",
+    "@dodycode/prettier-config": "workspace:*",
+    "@dodycode/tailwind-config": "workspace:*",
+    "@dodycode/tsconfig": "workspace:*",
+    "@types/react": "catalog:react19",
     "eslint": "catalog:",
     "prettier": "catalog:",
-    "react": "catalog:react18",
+    "react": "catalog:react19",
     "typescript": "catalog:",
     "zod": "catalog:"
   },
   "peerDependencies": {
-    "react": "catalog:react18",
+    "react": "catalog:react19",
     "zod": "catalog:"
   },
-  "prettier": "@acme/prettier-config"
+  "prettier": "@dodycode/prettier-config"
 }
