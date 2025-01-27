@@ -22,6 +22,10 @@ const config = {
     "@dodycode/auth",
     "@dodycode/utilities",
   ],
+
+  experimental: {
+    reactCompiler: true,
+  },
 };
 
 export default config;
