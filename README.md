@@ -2,7 +2,7 @@
 
 ![image](https://github.com/user-attachments/assets/06e6cd81-e996-45ae-9baf-53c23148d2d0)
 
-This is my personal T3 Stack template that I currently use.
+a simple monorepo template for my personal projects.
 
 Feel free to fork and customize it to suit your needs.
 
