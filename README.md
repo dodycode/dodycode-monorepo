@@ -1,6 +1,6 @@
 # Dodycode Monorepo
 
-A customized version of the [T3 Stack template](https://create.t3.gg/) that I currently use in my daily work.
+A customized version of the [T3 Stack template](https://create.t3.gg/) that I use in my daily work.
 
 Feel free to fork and customize it to suit your needs.
 
