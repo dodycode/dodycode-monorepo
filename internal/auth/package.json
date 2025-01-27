@@ -4,10 +4,7 @@
   "private": true,
   "type": "module",
   "exports": {
-    ".": {
-      "react-server": "./src/index.rsc.ts",
-      "default": "./src/index.ts"
-    },
+    ".": "./src/index.ts",
     "./env": "./env.ts"
   },
   "license": "MIT",
@@ -21,6 +18,7 @@
     "@auth/core": "0.37.2",
     "@auth/drizzle-adapter": "1.7.4",
     "@dodycode/db": "workspace:*",
+    "@dodycode/utilities": "workspace:*",
     "@t3-oss/env-nextjs": "catalog:",
     "better-sqlite3": "^11.8.1",
     "next": "catalog:next15",

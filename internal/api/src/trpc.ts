@@ -6,13 +6,12 @@
  * tl;dr - this is where all the tRPC server stuff is created and plugged in.
  * The pieces you will need to use are documented accordingly near the end
  */
+import type { Session } from "@dodycode/auth";
 import { initTRPC, TRPCError } from "@trpc/server";
 import superjson from "superjson";
 import { ZodError } from "zod";
 
-import type { Session } from "@dodycode/auth";
 import { auth, validateToken } from "@dodycode/auth";
-import { db } from "@dodycode/db/client";
 
 /**
  * Isomorphic Session getter for API requests
@@ -49,7 +48,6 @@ export const createTRPCContext = async (opts: {
 
   return {
     session,
-    db,
     token: authToken,
   };
 };

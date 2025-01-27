@@ -9,17 +9,19 @@ const config = {
   reactStrictMode: true,
 
   /** Enables hot reloading for local packages without a build step */
-  transpilePackages: [
-    "@dodycode/api",
-    "@dodycode/auth",
-    "@dodycode/db",
-    "@dodycode/ui",
-    "@dodycode/validators",
-  ],
+  transpilePackages: ["@dodycode/ui", "@dodycode/validators"],
 
   /** We already do linting and typechecking as separate tasks in CI */
   eslint: { ignoreDuringBuilds: true },
   typescript: { ignoreBuildErrors: true },
+
+  // Whenever you add internal packages, add them here
+  serverExternalPackages: [
+    "@dodycode/db",
+    "@dodycode/api",
+    "@dodycode/auth",
+    "@dodycode/utilities",
+  ],
 };
 
 export default config;

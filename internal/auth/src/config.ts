@@ -6,13 +6,14 @@ import type {
 import { skipCSRFCheck } from "@auth/core";
 import { DrizzleAdapter } from "@auth/drizzle-adapter";
 import { encode as defaultEncode } from "next-auth/jwt";
-import Discord from "next-auth/providers/discord";
 import { v4 as uuid } from "uuid";
 
+import { schema } from "@dodycode/db";
 import { db } from "@dodycode/db/client";
-import { Account, Session, User } from "@dodycode/db/schema";
 
 import { env } from "../env";
+import { CredentialsProvider } from "./providers/credentials";
+import { DiscordProvider } from "./providers/discord";
 
 declare module "next-auth" {
   interface Session {
@@ -23,9 +24,9 @@ declare module "next-auth" {
 }
 
 const adapter = DrizzleAdapter(db, {
-  usersTable: User,
-  accountsTable: Account,
-  sessionsTable: Session,
+  usersTable: schema.User,
+  accountsTable: schema.Account,
+  sessionsTable: schema.Session,
 });
 
 export const isSecureContext = env.NODE_ENV !== "development";
@@ -40,12 +41,12 @@ export const authConfig = {
       }
     : {}),
   secret: env.AUTH_SECRET,
-  providers: [
-    Discord({
-      clientId: env.AUTH_DISCORD_ID,
-      clientSecret: env.AUTH_DISCORD_SECRET,
-    }),
-  ],
+  providers: [DiscordProvider, CredentialsProvider],
+  pages: {
+    signIn: "/auth/sign-in",
+    newUser: "/",
+    error: "/auth/sign-in",
+  },
   callbacks: {
     session: (opts) => {
       if (!("user" in opts))
