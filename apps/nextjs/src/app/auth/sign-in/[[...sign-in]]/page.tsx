@@ -1,12 +1,27 @@
+import Link from "next/link";
+
+import { AuthActions } from "../../_components/auth-actions";
+import { AuthErrorAlert } from "../../_components/auth-error-alert";
+import { AuthSiderHeader } from "../../_components/auth-sider-header";
+import { SignInForm } from "./_components/form";
+import { LoginFormFields } from "./_components/form-fields";
+
 export default function SignInPage() {
   return (
-    <>
-      <div className="flex flex-col items-center gap-2 text-center">
-        <h1 className="text-2xl font-bold">Login to your account</h1>
-        <p className="text-balance text-sm text-muted-foreground">
-          Enter your email and password below to login to your account
-        </p>
+    <SignInForm>
+      <AuthErrorAlert />
+      <AuthSiderHeader />
+      <LoginFormFields />
+      <AuthActions />
+      <div className="text-center text-sm">
+        Don't have an account?
+        <Link
+          href="/auth/sign-up"
+          className="ml-1 underline underline-offset-4"
+        >
+          Sign up
+        </Link>
       </div>
-    </>
+    </SignInForm>
   );
 }
