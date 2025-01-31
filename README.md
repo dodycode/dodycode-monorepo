@@ -1,4 +1,4 @@
-# Dodycode Monorepo
+# NextJS Turborepo Boilerplate
 
 A customized version of the [T3 Turbo Template](https://github.com/t3-oss/create-t3-turbo) that I use in my daily work.
 
