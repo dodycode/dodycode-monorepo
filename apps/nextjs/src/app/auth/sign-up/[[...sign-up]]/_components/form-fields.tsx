@@ -9,16 +9,7 @@ import { Input } from "@dodycode/ui/input";
 import { Label } from "@dodycode/ui/label";
 
 const SignUpFormFields: React.FC = () => {
-  const { control, reset } = useFormContext<SignUpValues>();
-
-  useEffect(() => {
-    reset({
-      name: "",
-      email: "",
-      password: "",
-    });
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  const { control } = useFormContext<SignUpValues>();
 
   return (
     <div className="grid gap-6">
